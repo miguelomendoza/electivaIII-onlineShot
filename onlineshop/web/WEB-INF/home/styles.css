@@ -1,0 +1,279 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/05/2021, 10:48:45 AM
+    Author     : mmendoza
+*/
+
+* {
+    margin: 0;
+    padding: 0;                
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+html{
+    height: 100%;                
+}
+
+.container-home{
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+input{
+    padding: 2%;
+    margin: 0;
+    margin-top: 5px;    
+    width: -webkit-fill-available;
+    width: -moz-available;
+    font-size: 15px;
+    color: gray;
+    font-weight: 100;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+button{
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background: #9de36e;
+    border: 1px solid #8cac7d;
+    color: white;
+    padding: 7px;
+    margin-bottom: 5px;
+}
+
+.btn-primary:hover{
+    background: white;
+    color: #9de36e;
+    border: 1px solid #9de36e;
+}
+
+.btn-secondary{
+    color: white;
+    background: gray;
+    border: 1px solid gray;
+    padding: 7px;
+}
+
+.btn-secondary:hover{
+    background: #ebebeb;
+    color: gray;
+}
+
+header{
+    background: #072146;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+header h3{
+    margin-left: 20px;
+    display: flex;
+}
+
+header h3 img{
+    width: 30px;
+    animation: App-logo-spin infinite 2s linear;
+    pointer-events: none;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+.sidebar{
+    background: white;
+    width: 20%;
+    height: 90%;
+    display: flex;
+    float: left;
+}
+
+.content{
+    width: 80%;
+    height: 90%;
+    float: right;
+}
+
+.navigation-bar{
+    padding: 10px;    
+}
+
+.navigation-bar a{
+    text-decoration: none;
+    color: #072146;
+    font-size: 15px;
+    font-family: sans-serif;    
+}
+
+.navigation-bar a:hover{
+    font-weight: bold;
+}
+
+.page{
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.btn-logout{
+    width: auto;
+    float: right;
+    background: #02a5a5;
+    border: 2px solid #02a5a5;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.btn-logout:hover{
+    background: white;
+    color: #02a5a5;
+    border: 2px solid #02a5a5;;
+}
+
+.btn-login{
+    width: auto;
+    float: right;
+    background: #004481;
+    border: 2px solid #004481;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.btn-login:hover{
+    background: white;
+    color: #004481;
+    border: 2px solid #004481;
+}
+
+.title-user{
+    width: auto;
+    margin: auto;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.elements-header{
+    width: auto;    
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+}
+
+.nav-selected{
+    font-weight: bold;
+}
+
+.purchases-table{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    order-collapse: collapse;
+    box-sizing: border-box;
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;        
+}
+
+.purchases-table thead th{
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;    
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    text-align: inherit;    
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;    
+    line-height: 1.5;    
+}
+
+.purchases-table td{
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;    
+}
+
+.purchases-table tbody tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;    
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.05);
+}
+
+.btn-ver-carrito{
+    width: auto;
+    background: #004481;
+    border: 2px solid #004481;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: 5px;    
+    border-radius: 7px;
+}
+
+.btn-eliminar{
+    width: auto;
+    background: #F17E7E;
+    border: 2px solid #DF5858;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: 5px;    
+    border-radius: 7px;    
+}
+
+.btn-eliminar:disabled{
+    background: #6c757d;
+    border: 2px solid #6c757d;
+    color: white;
+}
+
+.btn-editar{
+    width: auto;
+    background: #78C550;
+    border: 2px solid #65AB41;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: 5px;    
+    border-radius: 7px;    
+}

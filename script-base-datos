@@ -1,0 +1,125 @@
+-- Table: public.categoria
+
+--DROP TABLE public.categoria;
+
+CREATE TABLE public.categoria
+(
+    id_categoria serial,
+    descripcion character varying (100) NOT NULL,
+    CONSTRAINT categoria_pkey PRIMARY KEY (id_categoria)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.categoria
+    OWNER to postgres;
+	
+
+-- Table: public.producto
+
+--DROP TABLE public.producto;
+
+CREATE TABLE public.producto
+(
+    id_producto serial,
+    descripcion character varying(200) NOT NULL,
+    id_categoria integer NOT NULL,
+    precio_unit numeric(18,2) NOT NULL,
+    cantidad integer NOT NULL,
+    CONSTRAINT pk_producto PRIMARY KEY (id_producto),
+    CONSTRAINT fk_id_categoria FOREIGN KEY (id_categoria)
+        REFERENCES public.categoria (id_categoria) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.producto
+    OWNER to postgres;
+	
+
+-- Table: public.cliente
+
+--DROP TABLE public.cliente;
+
+CREATE TABLE public.cliente
+(
+    id_cliente serial,
+    nombre character varying(100) NOT NULL,
+    apellido character varying(100) NOT NULL,
+    email character varying(200) NOT NULL,
+    login_name character varying(100) NOT NULL,
+    passwd character varying(200) NOT NULL,
+    tipo_cliente integer NOT NULL,
+    CONSTRAINT cliente_pkey PRIMARY KEY (id_cliente)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.cliente
+    OWNER to postgres;
+	
+-- Table: public.transacciones_cab
+
+--DROP TABLE public.transacciones_cab;
+
+CREATE TABLE public.transacciones_cab
+(
+    id_transaccion serial,
+    fecha timestamp with time zone NOT NULL,
+    id_cliente integer NOT NULL,
+    total numeric(18,2) NOT NULL,
+    direccion_envio character varying(200),
+    id_medio_pago integer,
+    nro_tarjeta numeric(19,0),
+    estado character varying(1) ,
+    CONSTRAINT pk_transaccion PRIMARY KEY (id_transaccion),
+    CONSTRAINT fk_transaccion_cliente FOREIGN KEY (id_cliente)
+        REFERENCES public.cliente (id_cliente) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.transacciones_cab
+    OWNER to postgres;
+	
+-- Table: public.transacciones_det
+
+--DROP TABLE public.transacciones_det;
+
+CREATE TABLE public.transacciones_det
+(
+    id_transaccion integer NOT NULL,
+    item integer NOT NULL,
+    id_producto integer NOT NULL,
+    cantidad integer,
+    precio numeric(18,2),
+    sub_total numeric(18,2),
+    CONSTRAINT transacciones_det_pkey PRIMARY KEY (id_transaccion, item),
+    CONSTRAINT fk_transaccion_producto FOREIGN KEY (id_producto)
+        REFERENCES public.producto (id_producto) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE,
+    CONSTRAINT fk_transaccion_transaccion_cab FOREIGN KEY (id_transaccion)
+        REFERENCES public.transacciones_cab (id_transaccion) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.transacciones_det
+    OWNER to postgres;

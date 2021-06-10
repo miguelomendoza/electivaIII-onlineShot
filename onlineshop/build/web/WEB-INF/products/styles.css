@@ -1,0 +1,213 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/05/2021, 10:48:45 AM
+    Author     : mmendoza
+*/
+
+* {
+    margin: 0;
+    padding: 0;                
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-weight: 100;                
+}
+
+html{
+    height: 100%;                
+}
+
+.container{
+    background: transparent;
+    width: 100%;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+input{
+    padding: 10px;
+    margin: 0;
+    width: -webkit-fill-available;
+    width: -moz-available;    
+    font-size: 15px;
+    color: gray;
+    font-weight: 100;
+    border: 1px solid #004481;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;    
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+button{
+    width: 100%;
+    font-size: 15px;
+}
+
+.btn-primary{
+    background: #9de36e;
+    border: 1px solid #8cac7d;
+    color: white;
+    padding: 7px;
+    margin: 0;
+}
+
+.btn-primary:hover{
+    background: white;
+    color: #9de36e;
+    border: 1px solid #9de36e;
+}
+
+.btn-secondary{
+    color: white;
+    background: gray;
+    border: 1px solid gray;
+    padding: 7px;
+}
+
+.btn-secondary:hover{
+    background: #ebebeb;
+    color: gray;
+}
+
+.search-block{
+}
+
+.search-btn{
+    width: 10%;
+    background: #004481; 
+    color: white;
+    border: 1px solid #004481;
+    border-radius: 0px 5px 5px 0px; 
+}
+
+.product-card{
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #02a5a5;
+    display: inline-block;
+    margin: 5px;
+    min-width: 200px;
+}
+
+.product-title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.product-category{
+    text-align: right;
+    font-size: 20px;
+    color: gray;
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+
+.product-quantity{
+    text-align: right;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 15px;  
+    padding-right: 20px
+}
+
+.product-price{
+    text-align: right;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;    
+    padding-left: 20px;
+    padding-right: 20px;    
+    padding-top: 20px;
+}
+
+.cant-input{
+    padding: 5px;
+    margin: 0;
+    font-size: 15px;
+    color: gray;
+    font-weight: 100;
+    border: 1px solid silver;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.kart-item-label{
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.kart-item-text{
+    text-align: right;
+    border: 1px solid silver;
+    padding: 5px;
+    border-radius: 5px;
+    width: -webkit-fill-available;    
+}
+
+.product-block{    
+    text-align: center;
+    padding-top: 10px;
+}
+
+.product-buy{
+    background: #02a5a5;
+    border: 1px solid #02a5a5;
+    color: white;
+    padding: 7px;
+    margin: 0;
+    border-radius: 10px;    
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.product-buy:hover{
+    background: white;
+    color: #02a5a5;
+    border: 1px solid #02a5a5;
+}
+
+.description-block{
+    width: 100%;
+    display: flex;    
+}
+
+.category-block{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;    
+}
+
+select{
+    font-size: 15px;
+    padding: 5px;
+    background: white;
+    border: 1px solid #004481;
+    color: gray;
+    border-radius: 5px;    
+}
+
+.btn-eliminar-item{
+    width: 30px;
+    height: 30px;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+}

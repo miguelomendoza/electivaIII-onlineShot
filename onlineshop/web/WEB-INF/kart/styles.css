@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/05/2021, 10:48:45 AM
+    Author     : mmendoza
+*/
+
+* {
+    margin: 0;
+    padding: 0;                
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-weight: 100;                
+}
+
+html{
+    height: 100%;                
+}
+
+.container{
+    background: white;
+    width: 100%;
+    display: inline-block;
+    position: relative;    
+}
+
+h1, h2, h3, h4, h5{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+input{
+    padding: 2%;
+    margin: 0;
+    margin-top: 5px;    
+    width: -webkit-fill-available;
+    font-size: 15px;
+    color: gray;
+    font-weight: 100;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+button{
+    width: 100%;
+    font-size: 15px;
+    border-radius: 0px;
+}
+
+.btn-confirm{
+    background: #02a5a5;
+    border: 1px solid #02a5a5;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.btn-confirm:hover{
+    background: white;
+    color: #02a5a5;
+    border: 2px solid #02a5a5;
+}
+
+.btn-secondary{
+    color: white;
+    background: gray;
+    border: 1px solid gray;
+    padding: 7px;
+}
+
+.btn-secondary:hover{
+    background: #ebebeb;
+    color: gray;
+}
+
+footer{
+    margin: 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.header{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #004481;
+    background: #004481;
+    color: white;
+    font-size: 18px;    
+}
+
+footer h3{
+    background: gray;
+    color: white;
+    padding: 10px;
+}
+
+.kart-item{
+    background: white;
+    color: gray;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.kart-item h2{
+    padding: 10px;
+    background: #004481;
+    margin-bottom: 10px;
+    color: white;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.total-number{
+    float: right;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.kart-items{
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
