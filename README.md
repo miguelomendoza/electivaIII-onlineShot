@@ -2,11 +2,10 @@
 
 Projecto Diseñado por:
 
-> Miguel Mendoza
------------------ 
-> Lizzie Cabaña   
+Miguel Mendoza. 
+Lizzie Cabaña.  
 
-
+--------------------------------------------------------------------
 * LOGIN_NAME: mmendoza
 * PASSWORD: mmendoza
 
