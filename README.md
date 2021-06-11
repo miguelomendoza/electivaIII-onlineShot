@@ -2,8 +2,8 @@
 
 Projecto Diseñado por:
 
-Miguel Mendoza. 
-Lizzie Cabaña.  
+* Miguel Mendoza.	 
+* Lizzie Cabañas.  
 
 --------------------------------------------------------------------
 * LOGIN_NAME: mmendoza
