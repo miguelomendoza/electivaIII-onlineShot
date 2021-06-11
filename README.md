@@ -2,7 +2,8 @@
 
 Projecto Diseñado por:
 
-> Miguel Mendoza 
+> Miguel Mendoza
+----------------- 
 > Lizzie Cabaña   
 
 
